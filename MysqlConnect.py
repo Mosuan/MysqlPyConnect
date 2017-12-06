@@ -15,6 +15,7 @@ class Mysql(object):
             "port": int(mysql_port),
             "password": mysql_pass,
             "db": mysql_database_name,
+            "charset": mysql_charset,
         }
 
     def connect(self, config):
