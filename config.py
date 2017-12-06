@@ -14,3 +14,5 @@ mysql_pass = "root"
 mysql_port = "3306"
 #数据库名
 mysql_database_name = "infoscaner"
+#编码
+mysql_charset = "utf8"
