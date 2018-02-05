@@ -32,7 +32,7 @@ class Mysql(object):
         result = False
         conn = self.connect(self.config)
         try:
-            cursor = conn.cursor()
+            cursor = conn.cursor(pymysql.cursors.DictCursor)
             cursor.execute(sql, argv)
             result = cursor.fetchall()
         except Exception,e:
@@ -49,7 +49,7 @@ class Mysql(object):
         result = False
         conn = self.connect(self.config)
         try:
-            cursor = conn.cursor()
+            cursor = conn.cursor(pymysql.cursors.DictCursor)
             result = cursor.execute(sql, argv)
             conn.commit()
         except Exception, e:
